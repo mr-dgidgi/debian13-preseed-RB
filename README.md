@@ -1,22 +1,25 @@
 # Fully automatic installation of Debian 13 through ISO remastering
 
-Script and configuration to remaster a debian netinst ISO for 100% unattended
-install. This was based on my previous 
-[Debian 11 preseed](https://github.com/istepaniuk/debian11-preseed) project.
+This is a fork from ["istepaniuk's debian13-preseed"](https://github.com/istepaniuk/debian13-preseed) modified for the RecoveryBox
+
+This tool need the followings packages (for debian):
+* libarchive-tools
+* xorriso
+
 
 Usage:
 
 1. Download a [debian "netinst"](https://www.debian.org/CD/netinst/) image.
-   (Tested with 13.3)
+   (Tested with 13.4)
 2. Adapt the preseed.cfg file to your needs. (This one installs just SSH and
    sudo)
 3. Run:
 
 ```
-./make-preseed-iso.sh debian-13.3.0-amd64-netinst.iso
+./make-preseed-iso.sh debian-13.4.0-amd64-netinst.iso
 ```
 
-This will create a new ISO image named `preseed-debian-13.3.0-amd64-netinst.iso`
+This will create a new ISO image named `preseed-debian-13.4.0-amd64-netinst.iso`
 which installs Debian on the first available disk without intervention, not even
 a boot menu prompt.
 
