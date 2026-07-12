@@ -30,14 +30,6 @@ disk\*\****
 
 > ** as returned by `list-devices disk`, so excluding usb
 
-Also... open the script and _read_ what it does. I made this for myself because
-I'm tired of hitting enter 40 times everytime I need to install debian.
-
-The automatic partitioning recipe for `partman` creates a 50MB EFI partition 
-and used the rest of the disk for a single ext4 root partition. Adjust to your
-needs. Travelers beware: `partman` is very finicky, test *one* change at a time
-using a VM.
-
 The location of the initrd is hardcoded to 'install.amd', this needs to be
 changed if you are using an iso for other than amd64.
 
