@@ -1,5 +1,11 @@
 # Fully automatic installation of Debian 13 through ISO remastering
 
+## RecoveryBox installation
+
+If you just want to install RecoveryBox, you can use the preseeded ISO image in the project and boot it on your machine. It will install RecoveryBox on the first available disk without any intervention.
+
+## Generating your own preseeded ISO image
+
 This is a fork from ["istepaniuk's debian13-preseed"](https://github.com/istepaniuk/debian13-preseed) modified for the RecoveryBox
 
 This tool need the followings packages (for debian):

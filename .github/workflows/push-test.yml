@@ -1,0 +1,9 @@
+name: push-test
+on:
+  push:
+    branches-ignore:
+      - main
+
+jobs:
+  Shellcheck:
+    uses: ./.github/workflows/shellcheck.yml
