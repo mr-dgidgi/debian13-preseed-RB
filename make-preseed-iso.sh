@@ -56,8 +56,11 @@ function recompute_md5_checksum() {
     echo "Calculating new md5 checksum..."
     echo " -- You can safely ignore the warning about a 'file system loop' below"
     cd isofiles
+    tmp_md5sum=$(mktemp --tmpdir md5sum.XXXXXX)
     chmod +w md5sum.txt
-    find . -follow -type f ! -name md5sum.txt -print0 | xargs -0 md5sum > md5sum.txt
+    find . -follow -type f ! -name md5sum.txt -print0 | xargs -0 md5sum > "$tmp_md5sum"
+    cat "$tmp_md5sum" > md5sum.txt
+    rm -f "$tmp_md5sum"
     chmod -w md5sum.txt
     cd ..
 }
